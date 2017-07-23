@@ -14,7 +14,7 @@
 
 var welcome_block = {
   type: 'html-keyboard-response',
-  stimulus: '<p>Welcome to the Age Task. In this study you will ' +
+  stimulus: '<p>Welcome to the fundraising Test. In this study you will ' +
   'complete an Implicit Association Test (IAT) in which you ' +
   'will be asked to sort pictures and words into groups as ' +
   'fast as you can.</p><p>Press any key to begin.</p>',
@@ -25,26 +25,26 @@ var category_block = {
   type: 'html-keyboard-response',
   stimulus: '<p>Next, you will use the "E" and "I" computer keys ' + 'to categorize items into groups as fast as you can. ' +
   'These are the four groups and the items that belong to each:<br><br>' +
-  '<strong>Good</strong>:<br>' + 'Fabulous, Excitement, Glorious, Cheerful, Cherish, ' +
-  'Enjoy, Delightful, Joyous<br><br>' + '<strong>Bad</strong>:<br>' + 'Humiliate, ' +
-  'Evil, Grief, Yucky, Detest, Poison, Abuse, Despise<br><br>' +
-  '<strong>Old</strong>:<br>' + "<img src='img/age/of1.jpg'></img>  " +
-  "<img src='img/age/of2.jpg'></img>  " + "<img src='img/age/of3.jpg'></img>  " +
-  "<img src='img/age/om1.jpg'></img>  " + "<img src='img/age/om2.jpg'></img>  " +
-  "<img src='img/age/om3.jpg'></img><br><br>" + '<strong>Young</strong>:<br>' +
-  "<img src='img/age/yf1.jpg'></img>  " + "<img src='img/age/yf4.jpg'></img>  " +
-  "<img src='img/age/yf5.jpg'></img>  " + "<img src='img/age/ym2.jpg'></img>  " +
-  "<img src='img/age/ym3.jpg'></img>  " + "<img src='img/age/ym5.jpg'></img><br><br>" +
+  '<strong>Good</strong>:<br>' + 'Lovely, Kind, Helping hand, Guidance, Spectacular, ' +
+  'Generous, Triumph, Comfort<br><br>' + '<strong>Bad</strong>:<br>' + 'Pain, ' +
+  'Failure, Selfish, Horrific, Disease, Hate, Angry, Handicap<br><br>' +
+  '<strong>Person of color</strong>:<br>' + "<img src='img/race/poc1.jpg'></img>  " +
+  "<img src='img/race/poc2.jpg'></img>  " + "<img src='img/race/poc3.jpg'></img>  " +
+  "<img src='img/race/poc4.jpg'></img>  " + "<img src='img/race/poc5.jpg'></img>  " +
+  "<img src='img/race/poc6.jpg'></img><br><br>" + '<strong>White</strong>:<br>' +
+  "<img src='img/race/white1.jpg'></img>  " + "<img src='img/race/white2.jpg'></img>  " +
+  "<img src='img/race/white3.jpg'></img>  " + "<img src='img/race/white4.jpg'></img>  " +
+  "<img src='img/race/white5.jpg'></img>  " + "<img src='img/race/white6.jpg'></img><br><br>" +
   "Press any key to continue.</p>",
   post_trial_gap: 1500
 };
 
 var instructions_block = {
   type: 'html-keyboard-response',
-  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Press E for:<br><strong>OLD</strong></p></div>" +
-  "<div style='position: absolute; top: 18%; right: 20%'><p>Press I for:<br><strong>YOUNG</strong></p></div>" +
-  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Put a left finger on the <strong>E</strong> key for items that belong to the Old People category. Put a right finger on the " +
-  "<strong>I</strong> key for items that belong to the Young People " +
+  stimulus: "<div style='position: absolute; top: 18%; left: 20%'><p>Press E for:<br><strong>Person of color</strong></p></div>" +
+  "<div style='position: absolute; top: 18%; right: 20%'><p>Press I for:<br><strong>white</strong></p></div>" +
+  "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Put a left finger on the <strong>E</strong> key for items that belong to the Person of color People category. Put a right finger on the " +
+  "<strong>I</strong> key for items that belong to the White People " +
   "category. Items will appear one at a time.<br><br>" + "If you " +
   "make a mistake, a red X will appear. Press the keys listed below " +
   "to continue. Go as fast as you can while being accurate.<br><br> " +
@@ -65,25 +65,25 @@ var trial_block = {
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['OLD'],
-      right_category_label: ['YOUNG'],
+      left_category_label: ['Person of color'],
+      right_category_label: ['White'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
   ],
   timeline_variables: [
-    {stimulus: "img/age/of1.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/of2.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/of3.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/om1.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/om2.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/om3.jpg", stim_key_association: "left"},
-    {stimulus: "img/age/yf1.jpg", stim_key_association: "right"},
-    {stimulus: "img/age/yf4.jpg", stim_key_association: "right"},
-    {stimulus: "img/age/yf5.jpg", stim_key_association: "right"},
-    {stimulus: "img/age/ym2.jpg", stim_key_association: "right"},
-    {stimulus: "img/age/ym3.jpg", stim_key_association: "right"},
-    {stimulus: "img/age/ym5.jpg", stim_key_association: "right"}
+    {stimulus: "img/race/poc1.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/poc2.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/poc3.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/poc4.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/poc5.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/poc6.jpg", stim_key_association: "left"},
+    {stimulus: "img/race/white1.jpg", stim_key_association: "right"},
+    {stimulus: "img/race/white2.jpg", stim_key_association: "right"},
+    {stimulus: "img/race/white3.jpg", stim_key_association: "right"},
+    {stimulus: "img/race/white4.jpg", stim_key_association: "right"},
+    {stimulus: "img/race/white5.jpg", stim_key_association: "right"},
+    {stimulus: "img/race/white6.jpg", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 2
@@ -122,22 +122,22 @@ var trial_block2 = {
     }
   ],
   timeline_variables: [
-    {stimulus: "Humiliate", stim_key_association: "left"},
-    {stimulus: "Evil", stim_key_association: "left"},
-    {stimulus: "Grief", stim_key_association: "left"},
-    {stimulus: "Yucky", stim_key_association: "left"},
-    {stimulus: "Detest", stim_key_association: "left"},
-    {stimulus: "Poison", stim_key_association: "left"},
-    {stimulus: "Abuse", stim_key_association: "left"},
-    {stimulus: "Despise", stim_key_association: "left"},
-    {stimulus: "Fabulous", stim_key_association: "right"},
-    {stimulus: "Excitement", stim_key_association: "right"},
-    {stimulus: "Glorious", stim_key_association: "right"},
-    {stimulus: "Cheerful", stim_key_association: "right"},
-    {stimulus: "Cherish", stim_key_association: "right"},
-    {stimulus: "Enjoy", stim_key_association: "right"},
-    {stimulus: "Delightful", stim_key_association: "right"},
-    {stimulus: "Joyous", stim_key_association: "right"}
+    {stimulus: "Pain", stim_key_association: "left"},
+    {stimulus: "Failure", stim_key_association: "left"},
+    {stimulus: "Selfish", stim_key_association: "left"},
+    {stimulus: "Horrific", stim_key_association: "left"},
+    {stimulus: "Disease", stim_key_association: "left"},
+    {stimulus: "Hate", stim_key_association: "left"},
+    {stimulus: "Angry", stim_key_association: "left"},
+    {stimulus: "Handicap", stim_key_association: "left"},
+    {stimulus: "Lovely", stim_key_association: "right"},
+    {stimulus: "Kind", stim_key_association: "right"},
+    {stimulus: "Helping Hand", stim_key_association: "right"},
+    {stimulus: "Guidance", stim_key_association: "right"},
+    {stimulus: "Spectacular", stim_key_association: "right"},
+    {stimulus: "Generous", stim_key_association: "right"},
+    {stimulus: "Triumph", stim_key_association: "right"},
+    {stimulus: "Comfort", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 2
@@ -146,10 +146,10 @@ var trial_block2 = {
 var instructions_block3 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br> " +
-  "<strong>BAD</strong><br>" + "or<br>" + "<strong>OLD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>YOUNG</strong></div>" +
+  "<strong>BAD</strong><br>" + "or<br>" + "<strong>PERSON OF COLOR</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>WHITE</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Use <strong>E</strong> for Bad and for " +
-  "Old People<br>" + "Use <strong>I</strong> for Good and for Young People<br>" +
+  "Person of color People<br>" + "Use <strong>I</strong> for Good and for White People<br>" +
   "Each item belongs to only one category.<br><br>" + "If you " +
   "make a mistake, a red X will appear. Press the keys listed below " +
   "to continue. Go as fast as you can while being accurate.<br><br> " +
@@ -169,41 +169,41 @@ var trial_block3 = {
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['BAD', 'OLD'],
-      right_category_label: ['GOOD', 'YOUNG'],
+      left_category_label: ['BAD', 'PERSON OF COLOR'],
+      right_category_label: ['GOOD', 'WHITE'],
       response_ends_trial: true,
       data: { iat_type: 'practice' }
     }
   ],
   timeline_variables: [
-    {type: 'iat-image', stimulus: "img/age/of1.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/of2.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/of3.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/om1.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/om2.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/om3.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/yf1.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/yf4.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/yf5.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+    {type: 'iat-image', stimulus: "img/race/poc1.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/poc2.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/poc3.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/poc4.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/poc5.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/poc6.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white1.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white2.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white3.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white4.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white5.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white6.jpg", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Pain", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Failure", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Selfish", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Horrific", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Disease", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Hate", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Angry", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Handicap", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Lovely", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Kind", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Helping hand", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Guidance", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Spectacular", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Generous", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Triumph", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Comfort", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 1
@@ -212,10 +212,10 @@ var trial_block3 = {
 var instructions_block4 = {
   type: 'html-keyboard-response',
   stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br> " +
-  "<strong>BAD</strong><br>" + "or<br>" + "<strong>OLD</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
-  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>YOUNG</strong></div>" +
+  "<strong>BAD</strong><br>" + "or<br>" + "<strong>PERSON OF COLOR</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>" +
+  "Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" + "<strong>WHITE</strong></div>" +
   "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>This is the same as the previous part.<br>" + "Use <strong>E</strong> for Bad and for " +
-  "Old People<br>" + "Use <strong>I</strong> for Good and for Young People<br>" +
+  "Person of color People<br>" + "Use <strong>I</strong> for Good and for white People<br>" +
   "Each item belongs to only one category.<br><br>" + "If you " +
   "make a mistake, a red X will appear. Press the keys listed below " +
   "to continue. Go as fast as you can while being accurate.<br><br> " +
@@ -236,41 +236,41 @@ var trial_block4 = {
         trial_duration: 3000, //Only if display_feedback is false
         left_category_key: 'E',
         right_category_key: 'I',
-        left_category_label: ['BAD', 'OLD'],
-        right_category_label: ['GOOD', 'YOUNG'],
+        left_category_label: ['BAD', 'PERSON OF COLOR'],
+        right_category_label: ['GOOD', 'WHITE'],
         response_ends_trial: true,
         data: { iat_type: 'bad-old' }
       }
     ],
     timeline_variables: [
-      {type: 'iat-image', stimulus: "img/age/of1.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/of2.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/of3.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/om1.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/om2.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/om3.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/yf1.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/yf4.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/yf5.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+      {type: 'iat-image', stimulus: "img/race/poc1.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/poc2.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/poc3.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/poc4.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/poc5.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/poc6.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white1.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white2.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white3.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white4.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white5.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white6.jpg", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Pain", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Failure", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Selfish", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Horrific", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Disease", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Hate", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Angry", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Handicap", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Lovely", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Kind", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Helping hand", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Guidance", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Spectacular", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Generous", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Triumph", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Comfort", stim_key_association: "right"}
     ],
     randomize_order: true,
     repetitions: 2
@@ -278,16 +278,16 @@ var trial_block4 = {
 
   var instructions_block5 = {
     type: 'html-keyboard-response',
-    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br>" + "<strong>YOUNG</strong></div>" +
-    "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>OLD</strong></div>" +
+    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br>" + "<strong>WHITE</strong></div>" +
+    "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>PERSON OF COLOR</strong></div>" +
     "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Watch out, the labels have changed positions!<br>" +
-    "Use <strong>E</strong> for Young People<br>" + "Use <strong>I</strong> for Old People<br><br>" +
+    "Use <strong>E</strong> for White People<br>" + "Use <strong>I</strong> for Person of color People<br><br>" +
     "If you make a mistake, a red X will appear. Press the keys listed below " +
     "to continue. Go as fast as you can while being accurate.<br><br> " +
     "Press the any key when you are ready to start.</div>"
   };
 
-  var trial_block5 = { 
+  var trial_block5 = {
     timeline: [
       {
         type: 'iat-image',
@@ -301,25 +301,25 @@ var trial_block4 = {
         trial_duration: 3000, //Only if display_feedback is false
         left_category_key: 'E',
         right_category_key: 'I',
-        left_category_label: ['YOUNG'],
-        right_category_label: ['OLD'],
+        left_category_label: ['WHITE'],
+        right_category_label: ['PERSON OF COLOR'],
         response_ends_trial: true,
         data: { iat_type: 'practice' }
       }
     ],
     timeline_variables: [
-      {type: 'iat-image', stimulus: "img/age/of1.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/of2.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/of3.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om1.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om2.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om3.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/yf1.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/yf4.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/yf5.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "left"}
+      {type: 'iat-image', stimulus: "img/race/poc1.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc2.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc3.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc4.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc5.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc6.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white1.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white2.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white3.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white4.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white5.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white6.jpg", stim_key_association: "left"}
     ],
     randomize_order: true,
     repetitions: 2
@@ -328,10 +328,10 @@ var trial_block4 = {
   var instructions_block6 = {
     type: 'html-keyboard-response',
     stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br>" + "<strong>BAD</strong><br>" + "or<br>" +
-    "<strong>YOUNG</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" +
-    "<strong>OLD</strong></div>" +
-    "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Use <strong>E</strong> for Bad and for Young People<br>" +
-    "Use <strong>I</strong> for Good and for Old People<br><br>" +
+    "<strong>WHITE</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" +
+    "<strong>PERSON OF COLOR</strong></div>" +
+    "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>Use <strong>E</strong> for Bad and for White People<br>" +
+    "Use <strong>I</strong> for Good and for Person of color People<br><br>" +
     "If you make a mistake, a red X will appear. Press the keys listed below " +
     "to continue. Go as fast as you can while being accurate.<br><br> " +
     "Press the any key when you are ready to start.</div>"
@@ -350,41 +350,41 @@ var trial_block4 = {
       trial_duration: 3000, //Only if display_feedback is false
       left_category_key: 'E',
       right_category_key: 'I',
-      left_category_label: ['BAD', 'YOUNG'],
-      right_category_label: ['GOOD', 'OLD'],
+      left_category_label: ['BAD', 'WHITE'],
+      right_category_label: ['GOOD', 'PERSON OF COLOR'],
       response_ends_trial: true,
       data: {iat_type: 'practice'}
     }
     ],
     timeline_variables: [
-      {type: 'iat-image', stimulus: "img/age/of1.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/of2.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/of3.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om1.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om2.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/om3.jpg", stim_key_association: "right"},
-      {type: 'iat-image', stimulus: "img/age/yf1.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/yf4.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/yf5.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "left"},
-      {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-      {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-      {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+      {type: 'iat-image', stimulus: "img/race/poc1.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc2.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc3.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc4.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc5.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/poc6.jpg", stim_key_association: "right"},
+      {type: 'iat-image', stimulus: "img/race/white1.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white2.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white3.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white4.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white5.jpg", stim_key_association: "left"},
+      {type: 'iat-image', stimulus: "img/race/white6.jpg", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Pain", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Failure", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Selfish", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Horrific", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Disease", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Hate", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Angry", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Handicap", stim_key_association: "left"},
+      {type: 'iat-html', stimulus: "Lovely", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Kind", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Helping hand", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Guidance", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Spectacular", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Generous", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Triumph", stim_key_association: "right"},
+      {type: 'iat-html', stimulus: "Comfort", stim_key_association: "right"}
     ],
     randomize_order: true,
     repetitions: 1
@@ -392,12 +392,12 @@ var trial_block4 = {
 
   var instructions_block7 = {
     type: 'html-keyboard-response',
-    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br>" + "<strong>Bad</strong><br>" + "or<br>" +
-    "<strong>Young People</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>Good</strong><br>" + "or<br>" +
-    "<strong>Old People</strong></div>" +
+    stimulus: "<div style='position: absolute; top: 18%; left: 20%'>Press E for:<br>" + "<strong>BAD</strong><br>" + "or<br>" +
+    "<strong>WHITE</strong></div>" + "<div style='position: absolute; top: 18%; right: 20%'>Press I for:<br>" + "<strong>GOOD</strong><br>" + "or<br>" +
+    "<strong>PERSON OF COLOR</strong></div>" +
     "<div style='position: relative; top: 42%; margin-left: auto; margin-right: auto'>This is the same as the previous part<br>" +
-    "Use <strong>E</strong> for Bad and for Young People<br>" +
-    "Use <strong>I</strong> for Good and for Old People<br>" +
+    "Use <strong>E</strong> for Bad and for White People<br>" +
+    "Use <strong>I</strong> for Good and for Person of color People<br>" +
     "Each item belongs to only one category<br><br>" +
     "If you make a mistake, a red X will appear. Press the keys listed below " +
     "to continue. Go as fast as you can while being accurate.<br><br> " +
@@ -418,41 +418,41 @@ var trial_block7 = {
     trial_duration: 3000, //Only if display_feedback is false
     left_category_key: 'E',
     right_category_key: 'I',
-    left_category_label: ['BAD', 'YOUNG'],
-    right_category_label: ['GOOD', 'OLD'],
+    left_category_label: ['BAD', 'WHITE'],
+    right_category_label: ['GOOD', 'PERSON OF COLOR'],
     response_ends_trial: true,
     data: {iat_type: 'bad-young'}
   }
   ],
   timeline_variables: [
-    {type: 'iat-image', stimulus: "img/age/of1.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/of2.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/of3.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/om1.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/om2.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/om3.jpg", stim_key_association: "right"},
-    {type: 'iat-image', stimulus: "img/age/yf1.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/yf4.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/yf5.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/ym2.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/ym3.jpg", stim_key_association: "left"},
-    {type: 'iat-image', stimulus: "img/age/ym5.jpg", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Humiliate", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Evil", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Grief", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Yucky", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Detest", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Poison", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Abuse", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Despise", stim_key_association: "left"},
-    {type: 'iat-html', stimulus: "Fabulous", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Excitement", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Glorious", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cheerful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Cherish", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Enjoy", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Delightful", stim_key_association: "right"},
-    {type: 'iat-html', stimulus: "Joyous", stim_key_association: "right"}
+    {type: 'iat-image', stimulus: "img/race/poc1.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/poc2.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/poc3.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/poc4.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/poc5.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/poc6.jpg", stim_key_association: "right"},
+    {type: 'iat-image', stimulus: "img/race/white1.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white2.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white3.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white4.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white5.jpg", stim_key_association: "left"},
+    {type: 'iat-image', stimulus: "img/race/white6.jpg", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Pain", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Failure", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Selfish", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Horrific", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Disease", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Hate", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Angry", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Handicap", stim_key_association: "left"},
+    {type: 'iat-html', stimulus: "Lovely", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Kind", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Helping hand", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Guidance", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Spectacular", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Generous", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Triumph", stim_key_association: "right"},
+    {type: 'iat-html', stimulus: "Comfort", stim_key_association: "right"}
   ],
   randomize_order: true,
   repetitions: 2
@@ -474,8 +474,8 @@ var trial_block7 = {
       var d = (mean_correct_responses_bad_young - mean_correct_responses_bad_old) / sd;
 
       return "<p>You're done! Below is some information about how you performed.</p>"+
-        "<p>When the pairs were BAD/YOUNG and GOOD/OLD, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong> to respond.</p>"+
-        "<p>When the pairs were BAD/OLD and GOOD/YOUNG, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong> to respond.</p>"+
+        "<p>When the pairs were BAD/WHITE and GOOD/PERSON OF COLOR, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_young)+"ms</strong> to respond.</p>"+
+        "<p>When the pairs were BAD/PERSON OF COLOR and GOOD/WHITE, it took you an average of <strong>"+Math.floor(mean_correct_responses_bad_old)+"ms</strong> to respond.</p>"+
         "<p>Your D score, an index of performance that takes into account this difference and the overall level of variability in your responses, is <strong>"+d.toFixed(2)+"</strong></p>"+
         "<p>For reference, the Project Implicit IAT website labels D scores above 0.15 as a slight bias, scores above 0.35 as a moderate bias, and scores above 0.65 a strong bias.</p>"
     }
